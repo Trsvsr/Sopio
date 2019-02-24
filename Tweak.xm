@@ -98,4 +98,4 @@ BBSettingsGateway *_settingsGateway = [[NSClassFromString(@"BBSettingsGateway") 
 		%init(iOS11Up);
 	}
 }
-
+%end
