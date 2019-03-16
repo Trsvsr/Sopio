@@ -1,7 +1,7 @@
 Package: me.trsvsr.sopio
 Name: Sopio
 Depends: mobilesubstrate, firmware (>=10.0)
-Version: 2.0
+Version: 2.0.1
 Architecture: iphoneos-arm
 Description: Hides notification previews on the lock screen when Do Not Disturb is enabled.
 Maintainer: Trevor Schmitt <tdogg9401@gmail.com>

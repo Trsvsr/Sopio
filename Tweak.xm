@@ -55,6 +55,19 @@ BBSettingsGateway *_settingsGateway = [[NSClassFromString(@"BBSettingsGateway") 
 	}
 }
 %end
+
+/* make notifications think they're going into the Notification Center section
+(this seems to be required to make content preview hiding 100% effective) */
+%hook NCNotificationCombinedListViewController
+-(BOOL)_isNotificationRequestForNotificationCenterDestination:(id)arg1 {
+	if (dndEnabled == YES) {
+		return YES;
+	}
+	else {
+		return %orig;
+	}
+}
+%end
 %end
 
 /* this group of code will run on iOS 10 */
@@ -98,4 +111,3 @@ BBSettingsGateway *_settingsGateway = [[NSClassFromString(@"BBSettingsGateway") 
 		%init(iOS11Up);
 	}
 }
-%end
